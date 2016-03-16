@@ -6,3 +6,4 @@
       state: "{{ state }}"
       ports:
         - "{{ port }}:80"
+  - pause: minute=1"

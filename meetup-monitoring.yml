@@ -1,7 +1,7 @@
 - hosts: "{{ host }}"
   roles:
     - { role: deploy-app, tag: deploy-app, state: present }
-    - { role: Datadog.datadog, sudo: yes }
+    - { role: Datadog.datadog, tag: deploy-checks, sudo: yes }
     - { role: deploy-monitors, tag: deploy-monitors, state: present }
     #- { role: integration-tests, tag: integration-tests }
     - { role: deploy-monitors, tag: mute-monitors, state: mute }

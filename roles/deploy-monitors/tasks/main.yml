@@ -1,5 +1,6 @@
 # Create a metric monitor
 #- name: "{{ state }} URL Monitor"
+- pause: minute=1
 - datadog_monitor:
     type: "service check"
     name: "Test monitor URL"
@@ -8,3 +9,4 @@
     message: "Test ! @benoit.pourre@d2-si.eu"
     api_key: "{{ datadog_api_key }}"
     app_key: "{{ datadog_app_key }}"
+- pause: minute=1
