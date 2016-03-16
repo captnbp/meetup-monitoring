@@ -1,10 +1,10 @@
 # Create a metric monitor
-- name: "{{ state }} URL Monitor"
-  datadog_monitor:
-  type: "service check"
-  name: "Test monitor URL"
-  state: "{{ state }}"
-  query: '"http.can_connect".over("env:meetup").last(3).count_by_status()"'
-  message: "Test ! @benoit.pourre@d2-si.eu"
-  api_key: "{{ datadog_api_key }}"
-  app_key: "{{ datadog_app_key }}"
+#- name: "{{ state }} URL Monitor"
+- datadog_monitor:
+    type: "service check"
+    name: "Test monitor URL"
+    state: "{{ state }}"
+    query: '"http.can_connect".over("env:meetup").last(3).count_by_status()"'
+    message: "Test ! @benoit.pourre@d2-si.eu"
+    api_key: "{{ datadog_api_key }}"
+    app_key: "{{ datadog_app_key }}"
