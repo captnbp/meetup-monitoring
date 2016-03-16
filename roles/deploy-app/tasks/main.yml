@@ -1,0 +1,7 @@
+  - name: Deploy meetup app
+    docker:
+      name: meetup-app
+      image: docker-registry.meetup.kitstartup.ovh/meetup-monitoring:{{ build_number }}
+      state: {{ state }}
+      ports:
+        - "{{ port }}:80"
