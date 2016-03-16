@@ -1,5 +1,6 @@
 # Create a metric monitor
-datadog_monitor:
+- name: {{ state }} URL Monitor
+  datadog_monitor:
   type: "service check"
   name: "Test monitor URL"
   state: "{{ state }}"
