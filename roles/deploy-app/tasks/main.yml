@@ -1,7 +1,7 @@
   - name: Deploy meetup app
     docker:
       name: meetup-app
-      pull: always
+      #pull: always
       image: "docker-registry.meetup.kitstartup.ovh/meetup-monitoring:{{ build_number }}"
       state: "{{ state }}"
       ports:
