@@ -1,4 +1,4 @@
-  - name: Deploy meetup app
+  - name: "Deploy meetup app {{ state }}"
     docker:
       name: meetup-app
       #pull: always
@@ -6,4 +6,4 @@
       state: "{{ state }}"
       ports:
         - "{{ port }}:80"
-  - pause: minutes=1
+  - pause: seconds=30
